@@ -25,7 +25,7 @@ let message;
 const customerSearch = function (message) {
   if (inStock.includes(search.toLowerCase())) {
     return (message = `<h2>Yes, we have <strong>${search}</strong>. It is <strong>#${inStock.indexOf(
-      search
+      search.toLowerCase()
     )}</strong> on our list!</h2>`);
   } else if (search === "") {
     return (message = `<h2>Here is a list of all our current products:</h2> <p>${inStock.join(
